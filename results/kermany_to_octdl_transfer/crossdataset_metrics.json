@@ -1,0 +1,101 @@
+{
+  "experiment": "kermany_resnet50_baseline_transferred_to_octdl",
+  "checkpoint": "/kaggle/input/notebooks/samarthmishra208/kermany-baseline/results/best.pt",
+  "label_scheme": "binary_referable",
+  "headline_auroc_drop": 0.013076332945026192,
+  "headline_sens95_drop": 0.047475728686667495,
+  "results": {
+    "octdl_transfer": {
+      "dataset": "OCTDL transfer (binary referable)",
+      "n": 2064,
+      "positive_rate": 0.8391472868217055,
+      "auroc": 0.9849988870029773,
+      "auprc": 0.9969324239894066,
+      "sensitivity_at_95_specificity": 0.9486143187066974,
+      "balanced_sensitivity": 0.9474595842956121,
+      "balanced_specificity": 0.9608433734939759,
+      "auroc_ci95": [
+        0.9778686339174281,
+        0.9902589472235269
+      ],
+      "auprc_ci95": [
+        0.9951273803312851,
+        0.9981686157677172
+      ],
+      "sensitivity_at_95_specificity_ci95": [
+        0.9163548299891866,
+        0.9617618513406794
+      ]
+    },
+    "kermany_in_dist": {
+      "dataset": "Kermany test in-dist (binary referable)",
+      "n": 12095,
+      "positive_rate": 0.6978090119884249,
+      "auroc": 0.9980752199480035,
+      "auprc": 0.9991484614639804,
+      "sensitivity_at_95_specificity": 0.9960900473933649,
+      "balanced_sensitivity": 0.9828199052132701,
+      "balanced_specificity": 0.9915184678522572,
+      "auroc_ci95": [
+        0.9974198353721585,
+        0.9986085946312202
+      ],
+      "auprc_ci95": [
+        0.998846395085879,
+        0.9994107139552051
+      ],
+      "sensitivity_at_95_specificity_ci95": [
+        0.99468480776311,
+        0.9973962261960023
+      ]
+    },
+    "octdl_by_sex": [
+      {
+        "group": "",
+        "n": 2064,
+        "positive_rate": 0.8391472868217055,
+        "auroc": 0.9849988870029773,
+        "auprc": 0.9969324239894066,
+        "sensitivity_at_95_specificity": 0.9486143187066974,
+        "balanced_sensitivity": 0.9474595842956121,
+        "balanced_specificity": 0.9608433734939759,
+        "auroc_ci95": [
+          0.9780561396123147,
+          0.9904156916194669
+        ],
+        "auprc_ci95": [
+          0.9951596198404999,
+          0.9982025737488043
+        ],
+        "sensitivity_at_95_specificity_ci95": [
+          0.9040925935191207,
+          0.961681985979566
+        ]
+      }
+    ],
+    "octdl_by_eye": [
+      {
+        "group": "",
+        "n": 2064,
+        "positive_rate": 0.8391472868217055,
+        "auroc": 0.9849988870029773,
+        "auprc": 0.9969324239894066,
+        "sensitivity_at_95_specificity": 0.9486143187066974,
+        "balanced_sensitivity": 0.9474595842956121,
+        "balanced_specificity": 0.9608433734939759,
+        "auroc_ci95": [
+          0.9780561396123147,
+          0.9904156916194669
+        ],
+        "auprc_ci95": [
+          0.9951596198404999,
+          0.9982025737488043
+        ],
+        "sensitivity_at_95_specificity_ci95": [
+          0.9040925935191207,
+          0.961681985979566
+        ]
+      }
+    ]
+  }
+}
