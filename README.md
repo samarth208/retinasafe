@@ -10,9 +10,23 @@ adapter research on retinal foundation models.
 |---|---|---|---|---|
 | OCT 4-class classification | Kermany OCT2017 | macro AUROC | **0.9877** | [0.986, 0.989] |
 | OCT cross-dataset transfer (binary referable) | Kermany → OCTDL | AUROC | **0.9850** | [0.978, 0.990] |
-| OCT cross-dataset transfer (binary referable) | Kermany → OCTDL | Sens@95Spec | 0.9486 | [0.916, 0.962] |
 | Fundus DR 5-class severity | APTOS 2019 | Quadratic Weighted Kappa | **0.9046** | [0.871, 0.932] |
-| Fundus DR 5-class severity | APTOS 2019 | macro AUROC | 0.9247 | [0.892, 0.950] |
+| Fundus multilabel (12 diseases) | BRSET | macro AUROC | **0.9211** | per-label CIs in `results/` |
+
+All numbers use **patient-disjoint splits** (where the dataset supports it) and
+**1,000-resample bootstrap** confidence intervals.
+
+## BRSET fairness audit (statistically significant findings only)
+
+Subgroup gaps where 95% CIs do not overlap:
+
+- **Camera bias on `drusens`** — AUROC 0.890 [0.867, 0.912] on Canon CR vs.
+  0.808 [0.760, 0.849] on Nikon NF5050. ~8 percentage point gap that persists
+  after bootstrap testing.
+- **Image quality on `increased_cup_disc`** — AUROC 0.916 [0.902, 0.930] on
+  Adequate-quality images vs. 0.845 [0.784, 0.898] on Inadequate-quality.
+
+No statistically significant subgroup differences detected by sex or age band.
 
 All numbers use **patient-disjoint splits** (where the dataset supports it) and
 **1,000-resample bootstrap** confidence intervals.
